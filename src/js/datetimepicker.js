@@ -347,7 +347,8 @@ angular.module('ui.bootstrap.datetimepicker', [])
             if (angular.isDefined(newval)) {
               applyTzOffset();
             } else {
-              // tzOffset has been removed, so reset date
+              // tzOffset has been removed, so reset date.
+              // This allows the offset to be toggled on/off
               momDate = moment(scope.ngModel);
             }
             scope.changeView(scope.data.currentView, getUTCTime());
